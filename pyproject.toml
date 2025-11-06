@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
-dependencies = []
+dependencies = [
+    "gymnasium>=1.2.2",
+    "matplotlib>=3.10.7",
+    "numpy>=2.2.6",
+    "tqdm>=4.67.1",
+]
 
 [dependency-groups]
 dev = [
@@ -35,14 +40,14 @@ reportIncompleteStub = "warning"
 reportInconsistentConstructor = "error"
 reportInvalidStubStatement = "warning"
 reportMissingImports = "warning"
-reportMissingSuperCall = "warning"
+reportMissingSuperCall = "none"
 reportMissingTypeStubs = "warning"
 reportOverlappingOverload = "error"
 reportPrivateImportUsage = "none"
 reportSelfClsParameterName = "warning"
 reportUnboundVariable = "error"
 reportUndefinedVariable = "error"
-reportUninitializedInstanceVariable = "warning"
+reportUninitializedInstanceVariable = "none"
 reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "warning"
 reportUnnecessaryIsInstance = "warning"

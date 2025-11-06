@@ -1,0 +1,75 @@
+[project]
+name = "on-policy-crm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.407",
+    "ruff>=0.14.3",
+]
+
+[tool.pyright]
+exclude = [".venv"]
+pythonVersion = "3.12"
+reportAbstractUsage = "none"
+reportAssertAlwaysTrue = "warning"
+reportCallInDefaultInitializer = "warning"
+reportConstantRedefinition = "error"
+reportDuplicateImport = "warning"
+reportImplicitStringConcatenation = "warning"
+reportImportCycles = "error"
+reportIncompatibleMethodOverride = "error"
+reportIncompatibleVariableOverride = "error"
+reportIncompleteStub = "warning"
+reportInconsistentConstructor = "error"
+reportInvalidStubStatement = "warning"
+reportMissingImports = "warning"
+reportMissingSuperCall = "warning"
+reportMissingTypeStubs = "warning"
+reportOverlappingOverload = "error"
+reportPrivateImportUsage = "none"
+reportSelfClsParameterName = "warning"
+reportUnboundVariable = "error"
+reportUndefinedVariable = "error"
+reportUninitializedInstanceVariable = "warning"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "warning"
+reportUnnecessaryIsInstance = "warning"
+reportUnsupportedDunderAll = "warning"
+reportUnusedClass = "warning"
+reportUnusedCoroutine = "error"
+reportUnusedFunction = "warning"
+reportUnusedImport = "warning"
+reportUnusedVariable = "warning"
+venv = ".venv"
+venvPath = "."
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = [
+  "C901", # too complex
+  "W191", # indentation contains tabs
+  "D401", # imperative mood
+  "D100", # missing docstring in public module
+  "D104", # missing docstring in public package
+  "B010", # conflicting with pyright
+]
+select = [
+  "E", # pycodestyle errors
+  "W", # pycodestyle warnings
+  "F", # pyflakes
+  "I", # isort
+  "B", # flake8-bugbear
+  "C4", # flake8-comprehensions
+  "N", # PEP8 naming conventions
+  "D", # pydocstyle
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
